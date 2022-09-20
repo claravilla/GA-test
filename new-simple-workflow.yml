@@ -6,4 +6,6 @@ on:
     types: [completed]
 
 jobs:
-  - run: echo "This works"
+  runs-on: ubuntu-20.04
+  steps:
+   - run: echo "This works"
