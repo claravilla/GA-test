@@ -6,5 +6,7 @@ jobs:
  build:
   runs-on: ubuntu-20.04
   steps:
-   - run: echo "workflow started"
-   - run: echo "workflow ended"
+   - name: step1
+     run: echo "workflow started"
+   - name: step2
+     run: echo "workflow ended"
