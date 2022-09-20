@@ -4,7 +4,6 @@ on:
  workflow_run:
     workflows: [Workflow1]
     types: [completed]
-    branches: [claravilla-patch-1]
  workflow_dispatch:
 
 jobs:
