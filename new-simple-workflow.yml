@@ -1,0 +1,9 @@
+name: Workflow2
+
+on:
+ workflow_run:
+    workflows: [Workflow1]
+    types: [completed]
+
+jobs:
+  - run: echo "This works"
