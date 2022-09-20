@@ -10,3 +10,5 @@ jobs:
      run: echo "workflow started"
    - name: step2
      run: echo "workflow ended"
+   - name: step3
+     run: echo "from a branch"
