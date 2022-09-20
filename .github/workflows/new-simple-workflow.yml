@@ -4,8 +4,10 @@ on:
  workflow_run:
     workflows: [Workflow1]
     types: [completed]
+ workflow_dispatch:
 
 jobs:
+ build:
   runs-on: ubuntu-20.04
   steps:
    - run: echo "This works"
