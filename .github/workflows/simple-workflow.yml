@@ -3,7 +3,8 @@ on:
   workflow_dispatch
   
 jobs:
-  runs-on:ubuntu-20.04
-  steps
+ build:
+  runs-on: ubuntu-20.04
+  steps:
    - run: echo "workflow started"
    - run: echo "workflow ended"
