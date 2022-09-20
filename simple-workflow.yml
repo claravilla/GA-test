@@ -5,5 +5,5 @@ on:
 jobs:
  runs-on:ubuntu latest
  steps:
-  -run echo "workflow started"
-  -run echo "workflow ended"
+  - run: echo "workflow started"
+  - run: echo "workflow ended"
