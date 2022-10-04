@@ -1,4 +1,4 @@
-name: Workflow 2
+name: triggered-on-workflow1-exit-action-on-failure
 
 on:
  workflow_run:
