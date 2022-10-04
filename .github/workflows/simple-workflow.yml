@@ -9,4 +9,12 @@ jobs:
    - name: step1
      run: echo "workflow started"
    - name: step2
+     run: echo "i'm wasting some time"
+   - name: step3
+     run: echo "i'm wasting some more time"
+   - name: step4
+     run: echo "i'm wasting even more time"
+   - name: step5
+     run: echo "i'm wasting a bit more time"
+   - name: step6
      run: echo "workflow ended"
