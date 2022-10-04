@@ -18,3 +18,5 @@ jobs:
      run: echo "i'm wasting a bit more time"
    - name: step6
      run: echo "workflow ended"
+   - name: makeitfail
+     run: exit 1
