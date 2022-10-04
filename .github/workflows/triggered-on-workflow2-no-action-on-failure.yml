@@ -1,8 +1,8 @@
-name: Workflow 3
+name: triggered-on-workflow2-no-action-on-failure
 
 on:
  workflow_run:
-    workflows: [Workflow 2]
+    workflows: [triggered-on-workflow1-exit-action-on-failure]
     types: [completed]
  workflow_dispatch:
 
