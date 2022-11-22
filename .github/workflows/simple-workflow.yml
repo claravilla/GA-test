@@ -26,7 +26,7 @@ jobs:
    - name: step9
      run : echo "i'm wasting a bit more time"
    - name: step10
-     run: echo "i'm wasting a bit more time"
+     run: sleep 3min
    - name: step11
      run: echo "workflow ended"
    - name: makeitfail
