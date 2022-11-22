@@ -29,5 +29,3 @@ jobs:
      run: sleep 3m
    - name: step11
      run: echo "workflow ended"
-   - name: makeitfail
-     run: exit 1
