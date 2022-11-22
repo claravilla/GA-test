@@ -8,6 +8,8 @@ jobs:
  build:
   runs-on: ubuntu-20.04
   steps:
+   - name: step0
+     run: echo ${{ github.ref }}-${{ github.workflow }}
    - name: step1
      run: echo "workflow started"
    - name: step2
