@@ -1,7 +1,7 @@
 name: Workflow 1
 on:
   workflow_dispatch
-# concurrency: ${{ github.ref }}
+concurrency: only-one-at-the time
   
 jobs:
  build:
