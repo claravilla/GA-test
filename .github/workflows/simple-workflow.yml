@@ -1,7 +1,7 @@
 name: Workflow 1
 on:
   workflow_dispatch
-concurrency: only-one-at-the time
+concurrency: only-one-at-the-time
   
 jobs:
  build:
