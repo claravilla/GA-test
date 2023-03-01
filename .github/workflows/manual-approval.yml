@@ -1,0 +1,20 @@
+name: Test Step approval
+on:
+ workflow_dispatch
+
+jobs:
+ test-manual-approval
+  runs-on: ubuntu-22.04
+  steps:
+   - name: build
+     run: echo build job
+   - name: wait
+     run: sleep 1m
+   - name: manual approval
+     uses: trstringer/manual-approval@v1
+     with: 
+       approvers: claravilla
+  - name: wait more
+    run: sleep 20s
+  - name: prod release
+    run: echo prod release
