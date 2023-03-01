@@ -13,6 +13,7 @@ jobs:
    - name: manual approval
      uses: trstringer/manual-approval@v1
      with: 
+       secret: ${{ github.TOKEN }}
        approvers: claravilla
    - name: wait more
      run: sleep 20s
