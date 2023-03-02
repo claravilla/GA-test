@@ -6,12 +6,12 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - run: echo this is job 1
-      - run: sleep 30s
+      - run: sleep 10s
   job2:
     runs-on: ubuntu-22.04
     steps:
       - run: echo this is job 2
-      - run: exit 1
+      - run: sleep 10s
   job3:
     needs: [job1, job2]
     if: ${{ failure() }}
