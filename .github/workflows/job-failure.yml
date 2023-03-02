@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - run: echo this is job 1
-      - run: sleep 10s
+      - run: exit 1
   job2:
     runs-on: ubuntu-22.04
     needs: [job1]
