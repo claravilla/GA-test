@@ -9,11 +9,18 @@ jobs:
       - run: sleep 10s
   job2:
     runs-on: ubuntu-22.04
+    needs: [job1]
     steps:
       - run: echo this is job 2
       - run: sleep 10s
   job3:
-    needs: [job1, job2]
+    needs: [job2]
+    runs-on: ubuntu-22.04
+    steps:
+      - run: echo this is job 3
+      - run: sleep 10
+  job4:
+    needs: [job1, job2, job3]
     if: ${{ failure() }}
     runs-on: ubuntu-22.04
     steps:
