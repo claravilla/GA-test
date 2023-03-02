@@ -11,7 +11,7 @@ jobs:
   job2:
     runs-on: ubuntu latest
     steps:
-      -run: echo this is job 2
+      - run: echo this is job 2
       - run: sleep 30s
   job3:
     needs: [job1,job2]
