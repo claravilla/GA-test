@@ -1,0 +1,21 @@
+name: Test job failure dependencies
+on:
+  workflow_dispatch
+
+jobs:
+  job1:
+   runs-on: ubuntu latest
+   steps:
+    - run: echo this is job 1
+    - run: sleep 30s
+  job2:
+    runs-on: ubuntu latest
+    steps:
+      -run: echo this is job 2
+      - run: sleep 30s
+  job3:
+    needs: [job1,job2]
+    runs-on: ubuntu latest
+    steps:
+     - run: echo this is job 3
+   
