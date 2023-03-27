@@ -6,6 +6,6 @@ runs:
  steps:
   - run: |
       echo I am an action
-      sleep 1min
+      sleep 1m
       echo I am finished
     shell: bash
