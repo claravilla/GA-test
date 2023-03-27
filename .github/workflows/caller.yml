@@ -5,4 +5,4 @@ on:
   
 jobs:
   call-my-workflow:
-   uses: ./.github/workflows/Caller Workflow
+   uses: ./.github/workflows/Called Workflow
