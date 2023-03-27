@@ -4,8 +4,8 @@ description: 'Action called from my workflow'
 runs:
  using: 'composite'
  steps:
-  run: |
+  - run: |
     echo I am an action
     sleep 1min
     echo I am finished
-  shell: bash
+    shell: bash
