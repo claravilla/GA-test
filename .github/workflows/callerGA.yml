@@ -9,4 +9,4 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps: 
-      - uses: .github/actions/called action
+      - uses: .github/actions/My Called Action@1
