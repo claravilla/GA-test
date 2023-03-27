@@ -7,5 +7,6 @@ runs:
   - run: |
       echo I am an action
       sleep 1m
+      echo I am the new version
       echo I am finished
     shell: bash
