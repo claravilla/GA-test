@@ -1,4 +1,4 @@
-name: Called Workflow Using Actions
+name: Caller Workflow Using Actions
 
 
 on:
@@ -9,4 +9,5 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps: 
+      - uses: actions/checkout@v3.4.0
       - uses: ./.github/actions/My Called Action@1
