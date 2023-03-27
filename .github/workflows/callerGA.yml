@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - uses: actions/checkout@v3.4.0
-      - uses: ./.github/actions/My Called Action
+      - uses: ./.github/actions/calledAction.yml
