@@ -5,4 +5,4 @@ on:
   
 jobs:
   call-my-workflow:
-   uses: ./.github/workflows/called.yml@v1
+   uses: ./.github/workflows/Caller Workflow
