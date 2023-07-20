@@ -11,8 +11,8 @@ on:
 jobs:
   printInput:
    runs-on: ubuntu-20.04
-   strategy:
-     matrix:
-      country: ${{ fromJson(format('[{0}]', inputs.countries)) }}
    steps:
-   - run: echo {{country}}
+   - name: printInput
+     run : echo ${{ github.event.inputs.countries }}
+   - name: print fromJson input
+     run: echo fromJSON(${{ github.event.inputs.countries }})
