@@ -14,5 +14,11 @@ jobs:
    steps:
    - name: printInput
      run : echo ${{ github.event.inputs.countries }}
-   - name: print fromJson input
-     run: echo fromJSON(${{ github.event.inputs.countries }})
+   - name: split input
+     uses: jungwinter/split@v2
+     id: split
+     with:
+      msg: ${{ github.event.inputs.countries }}
+   
+   - name: print split value
+     run: echo {{steps.split.outputs}}
