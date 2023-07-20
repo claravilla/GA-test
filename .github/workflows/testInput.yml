@@ -1,0 +1,15 @@
+name: Test input
+
+on:
+  workflow_dispatch:
+    inputs:
+      countries:
+        description: "List of countries to deploy secrets for. The input should be a comma separated string e.g. 'AU,DE'"
+        required: false
+        type: string
+
+jobs:
+  printInput:
+   runs-on: ubuntu-20.04
+   steps:
+    - run: echo ${{ github.event.inputs.countries }}
