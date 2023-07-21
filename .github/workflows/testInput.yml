@@ -11,17 +11,19 @@ on:
 jobs:
   printInput:
    runs-on: ubuntu-20.04
-   strategy:
-    matrix:
-      country: IFS="," read -ra ADDR<<<"${{github.event.inputs.countries}}"
+#    strategy:
+#     matrix:
+#       country: IFS="," read -ra ADDR<<<"${{github.event.inputs.countries}}"
    steps:
    - name: printInput
      run : echo ${{ github.event.inputs.countries }}
-  #  - name: split input
-  #    id: split
-  #    run: |
-  #      array=IFS="," read -ra ADDR<<<"${{github.event.inputs.countries}}"
-  #      echo array >> $GITHUB_OUTPUT
+   - name: split input
+     id: split
+     run: |
+       array=IFS="," read -ra ADDR<<<"${{github.event.inputs.countries}}"
+       echo ${array}
+    #    echo array >> $GITHUB_OUTPUT
+
      
-   - name: print split value
-     run: echo ${{ matrix.country}}
+#    - name: print split value
+#      run: echo ${{ matrix.country}}
