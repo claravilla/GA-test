@@ -11,9 +11,9 @@ on:
 jobs:
   printInput:
    runs-on: ubuntu-20.04
-   matrix:
-    strategy:
-       country: IFS="," read -ra ADDR<<<"${{github.event.inputs.countries}}"
+   strategy:
+    matrix:
+      country: IFS="," read -ra ADDR<<<"${{github.event.inputs.countries}}"
    steps:
    - name: printInput
      run : echo ${{ github.event.inputs.countries }}
