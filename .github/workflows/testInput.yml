@@ -11,6 +11,9 @@ on:
 jobs:
   printInput:
    runs-on: ubuntu-20.04
+   matrix:
+    strategy:
+       country: IFS="," read -ra ADDR<<<"${{github.event.inputs.countries}}"
    steps:
    - name: printInput
      run : echo ${{ github.event.inputs.countries }}
@@ -21,7 +24,4 @@ jobs:
   #      echo array >> $GITHUB_OUTPUT
      
    - name: print split value
-     matrix:
-      strategy:
-       country: IFS="," read -ra ADDR<<<"${{github.event.inputs.countries}}"
      run: echo ${{ matrix.country}}
