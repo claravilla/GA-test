@@ -16,4 +16,4 @@ jobs:
        country: ${{ fromJSON(github.event.inputs.countries) }}
    steps:
    - name: printInput
-     run : echo ${{ matrix.countries }}
+     run : echo ${{ matrix.country }}
