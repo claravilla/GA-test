@@ -21,4 +21,4 @@ jobs:
        echo array=${array} >> $GITHUB_OUTPUT
      
    - name: print split value
-     run: echo ${{steps.split.outputs.array}}
+     run: echo ${{ steps.split.outputs.array }}
