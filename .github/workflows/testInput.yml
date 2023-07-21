@@ -21,7 +21,7 @@ jobs:
      id: split
      run: |
        array=IFS="," read -ra ADDR<<<"${{github.event.inputs.countries}}"
-       echo ${array}
+       echo ${ADDR}
     #    echo array >> $GITHUB_OUTPUT
 
      
