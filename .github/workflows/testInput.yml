@@ -13,7 +13,7 @@ jobs:
    runs-on: ubuntu-20.04
    strategy:
     matrix: 
-       country: ${{ fromJSON(${{ github.event.inputs.countries }} }}
+       country: ${{ fromJSON(github.event.inputs.countries) }}
    steps:
    - name: printInput
      run : echo ${{ matrix.countries }}
