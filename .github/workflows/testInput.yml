@@ -21,5 +21,7 @@ jobs:
      run : echo ${{ matrix.country }}
    - name: print Env Var
      run: echo ${{ env.VAR }}
-   - name: print Both
-     run: echo ${{ matrix.country}} bla ${{ [format('{0}', env.VAR)] }}
+   - name: print Format
+     run: echo format('{0}', env.VAR)]
+#    - name: print Both
+#      run: echo ${{ matrix.country}} bla ${{ [format('{0}', env.VAR)] }}
