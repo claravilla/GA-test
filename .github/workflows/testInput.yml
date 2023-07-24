@@ -22,8 +22,8 @@ jobs:
    - name: print Env Var
      run: echo ${{ env.VAR }}
    - name: testFormat
-     run: echo format('Hello {0} {1} {2}', 'Mona', 'the', 'Octocat')
+     run: echo ${{ format('Hello {0} {1} {2}', 'Mona', 'the', 'Octocat') }}
    - name: print Format
-     run: echo format('{0}', env.VAR)
+     run: echo ${{ format('{0}', env.VAR) }}
 #    - name: print Both
 #      run: echo ${{ matrix.country}} bla ${{ [format('{0}', env.VAR)] }}
