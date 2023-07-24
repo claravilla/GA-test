@@ -8,7 +8,7 @@ on:
         required: false
         type: string
 env:
- VAR: 'var' 
+ VAR: 'this works' 
 
 jobs:
   printInput:
@@ -18,4 +18,4 @@ jobs:
        country: ${{ fromJSON(github.event.inputs.countries) }}
    steps:
    - name: printInput
-     run : echo ${{ matrix.country [env.var] }}
+     run : echo ${{ matrix.country[format(' {0}', env.VAR)] }}
