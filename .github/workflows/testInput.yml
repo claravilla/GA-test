@@ -22,4 +22,4 @@ jobs:
    - name: print Env Var
      run: echo ${{ env.VAR }}
    - name: print Both
-     run: echo ${{ matrix.country}}_${{[format('{0}', env.VAR)]}}
+     run: echo ${{ matrix.country}} bla ${{ [format('{0}', env.VAR)] }}
