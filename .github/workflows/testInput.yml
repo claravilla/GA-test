@@ -36,4 +36,4 @@ jobs:
    - name: test PP with format
      run: echo PAYPAL_CLIENT_SECRET_${{format('{0}', matrix.country)}}
    - name: test PP expression
-     run:  echo ${{ env.PAYPAL_CLIENT_SECRET_[format('{0}', matrix.country)]}}
+     run:  echo ${{ env[format('PAYPAL_CLIENT_SECRET_{0}', matrix.country)] }}
