@@ -7,6 +7,8 @@ on:
         description: "List of countries to deploy secrets for. The input should be a comma separated string e.g. 'AU,DE'"
         required: false
         type: string
+env:
+ VAR: 'var' 
 
 jobs:
   printInput:
@@ -16,4 +18,4 @@ jobs:
        country: ${{ fromJSON(github.event.inputs.countries) }}
    steps:
    - name: printInput
-     run : echo ${{ matrix.country }}
+     run : echo ${{ matrix.country [env.var] }}
