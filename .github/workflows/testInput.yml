@@ -9,6 +9,8 @@ on:
         type: string
 env:
  VAR: 'this works' 
+ PAYPAL_CLIENT_SECRET_DE: 'DE secret'
+ PAYPAL_CLIENT_SECRET_AU: 'AU secret'
 
 jobs:
   printInput:
@@ -27,3 +29,7 @@ jobs:
      run: echo ${{ format('{0}', env.VAR) }}
    - name: print Both
      run: echo ${{ matrix.country}}_${{ format('{0}', env.VAR) }}
+   - name: test PP setup
+     run: |
+      echo PAYPAL_CLIENT_ID_${{ matrix.country }}
+      echo ${{ env.PAYPAL_CLIENT_SECRET_}}${{format('{0}', matrix.country)}}
