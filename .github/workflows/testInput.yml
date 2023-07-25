@@ -16,9 +16,9 @@ env:
 jobs:
   printInput:
    runs-on: ubuntu-20.04
-#    strategy:
-#     matrix: 
-#        country: ${{ fromJSON(github.event.inputs.countries) }}
+   strategy:
+    matrix: 
+       country: ${{ fromJSON(github.event.inputs.countries) }}
    steps:
    - name: printInput
      run : echo ${{ env.COUNTRIES }}
@@ -41,9 +41,9 @@ jobs:
    - name: test PP client ID
      run: echo PAYPAL_CLIENT_ID_${{ env.COUNTRIES }}
    - name: test PP secret
-#      run: echo ${{ env[format('PAYPAL_CLIENT_SECRET_{0}', matrix.country)] }} NO - only with array
+     run: echo ${{ env[format('PAYPAL_CLIENT_SECRET_{0}', matrix.country)] }}
 #      run: echo ${{ env[format('PAYPAL_CLIENT_SECRET_{0}', 'DE')] }} YES
 #      run: echo ${{ env[format('PAYPAL_CLIENT_SECRET_{0}', env.COUNTRIES)] }} NO
-     run: echo ${{ env[format('PAYPAL_CLIENT_SECRET_{0}', github.event.inputs.countries)] }}
+#      run: echo ${{ env[format('PAYPAL_CLIENT_SECRET_{0}', github.event.inputs.countries)] }}
 
 
