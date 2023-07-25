@@ -11,7 +11,7 @@ env:
  VAR: 'this works' 
  PAYPAL_CLIENT_SECRET_DE: 'DE secret'
  PAYPAL_CLIENT_SECRET_AU: 'AU secret'
- COUNTRIES: ${{ github.event.inputs.countries) }}
+ COUNTRIES: ${{ github.event.inputs.countries }}
 
 jobs:
   printInput:
