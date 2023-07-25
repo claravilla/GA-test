@@ -11,32 +11,32 @@ env:
  VAR: 'this works' 
  PAYPAL_CLIENT_SECRET_DE: 'DE secret'
  PAYPAL_CLIENT_SECRET_AU: 'AU secret'
- COUNTRIES: 'AU'
+ COUNTRIES: ${{ github.event.inputs.countries) }}
 
 jobs:
   printInput:
    runs-on: ubuntu-20.04
-   strategy:
-    matrix: 
-       country: ${{ fromJSON(github.event.inputs.countries) }}
+#    strategy:
+#     matrix: 
+#        country: ${{ github.event.inputs.countries) }}
    steps:
-   - name: printInput
-     run : echo ${{ matrix.country }}
+#    - name: printInput
+#      run : echo ${{ matrix.country }}
    - name: print Env Var
      run: echo ${{ env.VAR }}
    - name: testFormat
      run: echo ${{ format('Hello {0} {1} {2}', 'Mona', 'the', 'Octocat') }}
    - name: print Format
      run: echo ${{ format('{0}', env.VAR) }}
-   - name: print Both
-     run: echo ${{ matrix.country}}_${{ format('{0}', env.VAR) }}
-   - name: test PP client
-     run: echo PAYPAL_CLIENT_ID_${{ matrix.country }}
-   - name: test PP env works
-     run: echo ${{ env.PAYPAL_CLIENT_SECRET_AU }}
-   - name: test PP with format
-     run: echo PAYPAL_CLIENT_SECRET_${{format('{0}', matrix.country)}}
-   - name: test PP expression
-     run:  echo ${{ env[format('PAYPAL_CLIENT_SECRET_{0}', matrix.country)] }}
+#    - name: print Both
+#      run: echo ${{ matrix.country}}_${{ format('{0}', env.VAR) }}
+#    - name: test PP client
+#      run: echo PAYPAL_CLIENT_ID_${{ matrix.country }}
+#    - name: test PP env works
+#      run: echo ${{ env.PAYPAL_CLIENT_SECRET_AU }}
+#    - name: test PP with format
+#      run: echo PAYPAL_CLIENT_SECRET_${{format('{0}', matrix.country)}}
+#    - name: test PP expression
+#      run:  echo ${{ env[format('PAYPAL_CLIENT_SECRET_{0}', matrix.country)] }}
    - name: test PP
      run: echo PAYPAL_CLIENT_ID_${{ env.COUNTRIES }} ${{ env[format('PAYPAL_CLIENT_ID_{0}', env.COUNTRIES)]}}
