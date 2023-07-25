@@ -43,7 +43,8 @@ jobs:
    - name: test matrix input
      run: echo ${{ matrix.country }}
    - name: test PP secret
-     run: echo ${{ env[format('PAYPAL_CLIENT_SECRET_{0}', matrix.country)] }}
+#      run: echo ${{ env[format('PAYPAL_CLIENT_SECRET_{0}',matrix.country)] }}
+     run:  echo ${{ env[format('PAYPAL_CLIENT_SECRET_{0}', $matrix.country)] }}
 #      run: echo ${{ env[format('PAYPAL_CLIENT_SECRET_{0}', 'DE')] }} YES
 #      run: echo ${{ env[format('PAYPAL_CLIENT_SECRET_{0}', env.COUNTRIES)] }} NO
 #      run: echo ${{ env[format('PAYPAL_CLIENT_SECRET_{0}', github.event.inputs.countries)] }}
