@@ -40,6 +40,8 @@ jobs:
 #      run:  echo ${{ env[format('PAYPAL_CLIENT_SECRET_{0}', matrix.country)] }}
    - name: test PP client ID
      run: echo PAYPAL_CLIENT_ID_${{ env.COUNTRIES }}
+   - name: test matrix input
+     run: echo ${{ matrix.country }}
    - name: test PP secret
      run: echo ${{ env[format('PAYPAL_CLIENT_SECRET_{0}', matrix.country)] }}
 #      run: echo ${{ env[format('PAYPAL_CLIENT_SECRET_{0}', 'DE')] }} YES
