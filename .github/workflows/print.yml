@@ -1,0 +1,12 @@
+name: Print variable
+on:
+  workflow_dispatch
+
+jobs:
+ print-variable:
+  runs-on: ubuntu latest
+  steps:
+  - name: print
+    run: |
+      echo $ {{ process.env.CI }}
+      echo this works
