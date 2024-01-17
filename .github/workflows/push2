@@ -1,0 +1,16 @@
+name: Run on push again
+on:
+ push:
+  branches:
+   - main
+
+jobs:
+ diff:
+  runs-on: ubuntu-latest
+  steps:
+    - run: echo this is my second diff
+ print-end-again:
+  runs-on: ubuntu-latest
+  needs: [diff]
+  steps:
+    - run: echo this is the end of the second job
