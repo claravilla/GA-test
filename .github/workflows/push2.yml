@@ -1,8 +1,7 @@
 name: Run on push again
 on:
- push:
-  branches:
-   - main
+ pull_request:
+  types: [opened]
 
 jobs:
  diff:
